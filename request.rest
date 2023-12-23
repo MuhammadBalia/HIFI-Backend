@@ -1,0 +1,91 @@
+//Create User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name"          : "balia1",
+    "email"         : "balia1@gmail.com",
+    "password"      : "123456",
+    "confPassword"  : "123456",
+    "role"          : "user"
+}
+
+###
+//Get All User
+GET http://localhost:5000/users
+
+###
+//Get Single User
+GET http://localhost:5000/users/ec3620b3-89c2-49df-b600-1d8e5c1615ad
+
+###
+//Update User
+PATCH http://localhost:5000/users/b8b4f253-a331-413a-a292-93f2bf57862f
+Content-Type: application/json
+
+{
+    "name"          : "balia Updated",
+    "email"         : "balia1@gmail.com",
+    "password"      : "",
+    "confPassword"  : "",
+    "role"          : "admin"
+}
+
+###
+//Delete User
+DELETE http://localhost:5000/users/b8b4f253-a331-413a-a292-93f2bf57862f
+
+###
+//Login Admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email"         : "admin@gmail.com",
+    "password"      : "123456"
+}
+
+
+###
+GET http://localhost:5000/me
+
+
+###
+//Logout
+DELETE http://localhost:5000/logout
+
+###
+//Get All Product
+GET http://localhost:5000/products
+
+###
+// Create Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name"              : "Bakso",
+    "description"       : "Enak",
+    "price"             : 10000
+}
+
+###
+//Get Single Product
+GET http://localhost:5000/products/8da61875-0021-4e22-8a35-24077e2f6973
+
+###
+// Update Product
+PATCH  http://localhost:5000/products/8da61875-0021-4e22-8a35-24077e2f6973
+Content-Type: application/json
+
+{
+    "name"              : "Bakso Yamin",
+    "description"       : "Enak Banget",
+    "price"             : 12000
+}
+
+###
+//Delete Product
+DELETE  http://localhost:5000/products/8da61875-0021-4e22-8a35-24077e2f6973
+
+
